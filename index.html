@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathler</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/notification.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- scripts -->
+    <script src="scripts/notification.js"></script>
+    <script src="scripts/calculation-patterns.js"></script>
+    <script src="scripts/calculation-generator.js"></script>
+    <script src="scripts/input-verifier.js"></script>
+    <script src="scripts/renderers.js"></script>
+    <script src="scripts/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="game">
+        <header>
+          <h2>MATHLER</h2>
+        </header>
+
+        <section class="goal-text">
+          Find the hidden calculation that equals <span id="goal">51</span>
+        </section>
+
+        <section class="attempts" id="attempts"></section>
+
+        <section class="inputs">
+          <div>
+            <button class="inputBtn">0</button>
+            <button class="inputBtn">1</button>
+            <button class="inputBtn">2</button>
+            <button class="inputBtn">3</button>
+            <button class="inputBtn">4</button>
+            <button class="inputBtn">5</button>
+            <button class="inputBtn">6</button>
+            <button class="inputBtn">7</button>
+            <button class="inputBtn">8</button>
+            <button class="inputBtn">9</button>
+          </div>
+          <div>
+            <button id="enterBtn">Enter</button>
+            <button class="inputBtn">+</button>
+            <button class="inputBtn">-</button>
+            <button class="inputBtn">*</button>
+            <button class="inputBtn">/</button>
+            <button id="deleteBtn">Delete</button>
+          </div>
+        </section>
+
+        <section class="share">
+          <button id="shareBtn">Share</button>
+        </section>
+
+        <footer>Made by "Qalang'i qasang'i dev"</footer>
+      </div>
+    </div>
+  </body>
+</html>
