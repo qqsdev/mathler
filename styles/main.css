@@ -1,0 +1,100 @@
+:root {
+  --empty-color: #88a;
+  --wrong-color: #fa2;
+  --correct-color: #6b1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.game {
+  width: 500px;
+  text-align: center;
+}
+
+.goal-text {
+  margin-bottom: 10px;
+}
+
+#goal {
+  font-weight: bold;
+}
+
+.attempts {
+  margin-bottom: 10px;
+}
+.attempts > div {
+  display: flex;
+  justify-content: center;
+}
+
+.attempts button {
+  width: 55px;
+  height: 55px;
+  margin: 0 5px 5px 0;
+  outline: none;
+  border-radius: 4px;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.share button,
+.inputs button {
+  padding: 20px 15px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: #ddd;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.inputs button:hover {
+  background-color: #ccc;
+}
+
+.attempts button:not(:empty) {
+  border-color: #888;
+  animation: toggleEmpty 500ms;
+}
+
+button.empty,
+button.wrong,
+button.correct {
+  border: none;
+  color: #fff;
+  animation: toggleColored 500ms;
+}
+
+button.empty {
+  background-color: var(--empty-color);
+}
+button.wrong {
+  background-color: var(--wrong-color);
+}
+button.correct {
+  background-color: var(--correct-color);
+}
+
+@keyframes toggleEmpty {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes toggleColored {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
