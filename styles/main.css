@@ -10,7 +10,8 @@
 }
 
 .game {
-  width: 500px;
+  width: 400px;
+  max-width: 90vw;
   text-align: center;
 }
 
@@ -42,10 +43,17 @@
   font-size: 1.1rem;
 }
 
+.inputs > div {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
 .share button,
 .inputs button {
-  padding: 20px 15px;
-  margin-bottom: 10px;
+  width: 40px;
+  height: 50px;
+  margin-bottom: 4px;
   outline: none;
   border: none;
   border-radius: 4px;
@@ -56,6 +64,10 @@
 }
 .inputs button:hover {
   background-color: #ccc;
+}
+
+button.wide {
+  min-width: 70px;
 }
 
 .attempts button:not(:empty) {

@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const deleteBtn = document.getElementById('deleteBtn');
   const shareBtn = document.getElementById('shareBtn');
 
-  const ATTEMPTS_COUNT = 6;
+  const MAX_ATTEMPTS = 6;
   const ATTEMPTS = [];
-  const CLUES = { empty: [], wrong: [], correct: [] };
   const RESULT = [];
+  const CLUES = { empty: [], wrong: [], correct: [] };
 
   const DIFFICULTY = MATH_PATTERNS.EASY;
   const SOLUTION_LENGTH = DIFFICULTY[0].length;
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentAttempt = null;
 
   function fillEmptyAttempts() {
-    for (let i = 0; i < ATTEMPTS_COUNT; i++) {
+    for (let i = 0; i < MAX_ATTEMPTS; i++) {
       ATTEMPTS.push(new Array(SOLUTION_LENGTH));
     }
 
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   function initNewGoal() {
     const calculation = generateCalculation(DIFFICULTY);
-    console.log(`${calculation} = ${eval(calculation)}`);
+    // console.log(`${calculation} = ${eval(calculation)}`);
 
     goal = eval(calculation);
     solution = calculation;
